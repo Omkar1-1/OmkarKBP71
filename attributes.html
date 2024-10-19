@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+    <form action="/action_page.php"autocomplete="on">
+        <label for="fname"> First name</label><br>
+        <input type="text" id="fname" name="fname" size="50"><br>
+        <label for="pin">PIN</label><br>
+        <input type="password" id="pin" name="pin" size="4" minlength="2" maxlength="6">
+
+        //min & maxlength
+        <label for="datemax">Enter a date before 1980-01-01</label>
+        <input type="date" id="datemax" name="datemax" max="1980-01-01"><br><br>
+        <label for="datemin">Enter a date after 2000-01-01</label>
+        <input type="date" id="datemin" name="datemin" min="2000-01-01"><br><br>
+        <label for="quantity">Quantity (between 1 and 5)</label>
+        <input type="number" id="quantity" name="quantity" min="1" ,max="5"><br><br>
+
+        //autocomplete
+        <label for="email">Email</label>
+        <input  type="email" id="email" name="email" autocomplete="off">
+        <label>Emaill</label>
+        <input type="email" autofocus>
+        <label for="files">files</label>
+        <input type="file" id="files" name="files" accept=".pdf" multiple>
+
+
+    </form>
+</body>
+</html>
