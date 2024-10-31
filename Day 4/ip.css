@@ -1,0 +1,29 @@
+.omkar{
+    color:blue;
+    font-family: sans-serif;
+}
+img{
+    width: 150px;
+    height: 200px;
+
+
+}
+
+.h11{
+color:pink; text-align: center; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+border: plane;
+border: 2px solid red;
+margin: 1px;
+padding: 10px;
+}
+.max-width{
+border:dotted;
+margin:100px;
+padding:50px;
+outline-offset: 10px;
+
+outline-style: groove;
+outline-color: blue;
+outline-width: 100px;
+
+}
