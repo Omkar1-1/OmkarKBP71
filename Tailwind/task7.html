@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Sidebar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* For the overlay when sidebar is open on small screens */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 40;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Toggle Button for Small Screens -->
+  <button id="toggleSidebar" class="bg-blue-500 text-white px-4 py-2 fixed top-4 left-4 z-50 md:hidden">
+    Menu
+  </button>
+
+  <!-- Sidebar -->
+  <div id="sidebar" 
+       class="fixed top-0 left-0 h-full bg-gray-800 text-white w-64 transform -translate-x-full md:translate-x-0 md:w-1/4 lg:w-64 md:static transition-transform duration-300 z-50">
+    <div class="p-6">
+      <h2 class="text-2xl font-bold mb-4">Sidebar</h2>
+      <ul class="space-y-2">
+        <li><a href="#" class="block hover:text-gray-400">Home</a></li>
+        <li><a href="#" class="block hover:text-gray-400">About</a></li>
+        <li><a href="#" class="block hover:text-gray-400">Services</a></li>
+        <li><a href="#" class="block hover:text-gray-400">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Overlay for Small Screens -->
+  <div id="overlay" class="hidden"></div>
+
+  <!-- Main Content -->
+  <main class="ml-0 md:ml-1/4 lg:ml-64 p-6">
+    <h1 class="text-3xl font-bold">Responsive Sidebar</h1>
+    <p class="mt-4">This is the main content area.</p>
+  </main>
+
+  <script>
+    const toggleSidebar = document.getElementById('toggleSidebar');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    toggleSidebar.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+      overlay.classList.toggle('hidden');
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive FAQ Accordion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- FAQ Section -->
+  <section class="py-12 px-6">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+
+      <!-- FAQ Accordion -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- FAQ 1 -->
+        <div class="bg-white border shadow-lg rounded-lg p-6">
+          <button class="w-full text-left text-xl font-semibold text-gray-800" type="button" data-toggle="faq1">What is our refund policy?</button>
+          <div id="faq1" class="hidden mt-4 text-gray-700">
+            <p>Our refund policy allows you to request a full refund within 30 days of purchase. No questions asked!</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-white border shadow-lg rounded-lg p-6">
+          <button class="w-full text-left text-xl font-semibold text-gray-800" type="button" data-toggle="faq2">How can I contact support?</button>
+          <div id="faq2" class="hidden mt-4 text-gray-700">
+            <p>You can contact our support team via the contact form on our website or email us directly at support@company.com.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-white border shadow-lg rounded-lg p-6">
+          <button class="w-full text-left text-xl font-semibold text-gray-800" type="button" data-toggle="faq3">Do we offer international shipping?</button>
+          <div id="faq3" class="hidden mt-4 text-gray-700">
+            <p>Yes, we offer international shipping to most countries. Shipping fees and times vary by location.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="bg-white border shadow-lg rounded-lg p-6">
+          <button class="w-full text-left text-xl font-semibold text-gray-800" type="button" data-toggle="faq4">Is there a trial period?</button>
+          <div id="faq4" class="hidden mt-4 text-gray-700">
+            <p>Yes, we offer a 14-day free trial for all our subscription plans. You can cancel anytime during the trial period.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="bg-white border shadow-lg rounded-lg p-6">
+          <button class="w-full text-left text-xl font-semibold text-gray-800" type="button" data-toggle="faq5">What payment methods do you accept?</button>
+          <div id="faq5" class="hidden mt-4 text-gray-700">
+            <p>We accept all major credit cards, PayPal, and other online payment methods. Secure transactions guaranteed.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="bg-white border shadow-lg rounded-lg p-6">
+          <button class="w-full text-left text-xl font-semibold text-gray-800" type="button" data-toggle="faq6">How do I cancel my account?</button>
+          <div id="faq6" class="hidden mt-4 text-gray-700">
+            <p>To cancel your account, please visit your account settings and click on 'Cancel Subscription'. You can also reach out to our support team for assistance.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Accordion Toggle Script -->
+  <script>
+    const faqButtons = document.querySelectorAll('button[data-toggle]');
+    faqButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const faqId = this.getAttribute('data-toggle');
+        const faqContent = document.getElementById(faqId);
+        faqContent.classList.toggle('hidden');
+      });
+    });
+  </script>
+
+</body>
+</html>
